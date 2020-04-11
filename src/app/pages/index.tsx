@@ -1,7 +1,57 @@
-import App from '../components/App'
+import App from '../components/App';
+import styled from 'styled-components';
+
+const text = [['福', '路'], ['美', '穂', '子', 'の'], ['ヒ', 'モ', 'に'], ['な', 'り', 'た', 'い']];
 
 export default () => (
   <App>
-    <p>Index Page</p>
+    <Area>
+      <Nene src="/nene.png" />
+      <Box>
+        <div>
+          <div>
+            {Array(4).fill(null).map((n, i) => {
+              return (<StyledP key={i}>
+                {text[i].map((t, i) => {return <span key={i}>{t}</span>})}
+              </StyledP>)
+            })}
+          </div>
+        </div>
+      </Box>
+    </Area>
   </App>
-)
+);
+
+const Area = styled.div`
+  height: 100%;
+  display: flex;
+`;
+
+const Box = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > div {
+    width: 50%;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > div {
+      width: 60%;
+    }
+  }
+`;
+
+const StyledP = styled.p`
+  display: flex;
+  justify-content: space-between;
+  font-size: 3vw;
+  font-weight: bold;
+  border-bottom: 5px dotted #DCDCDC;
+`;
+
+const Nene = styled.img`
+  height: 100%;
+`;

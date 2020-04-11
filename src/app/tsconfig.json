@@ -11,7 +11,7 @@
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "preserveConstEnums": true,
     "skipLibCheck": true,
     "sourceMap": true,

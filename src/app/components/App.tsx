@@ -1,10 +1,15 @@
-import Header from './Header'
+import styled from 'styled-components';
 
 const App = ({ children }: { children?: any }) => (
-  <main>
-    <Header />
+  <StyledMain>
     {children}
-  </main>
+  </StyledMain>
 )
 
-export default App
+export default App;
+
+const StyledMain = styled.main`
+  width: 100%;
+  height: 100%;
+  background-color: #FBCC44;
+`;
